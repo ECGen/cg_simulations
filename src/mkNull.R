@@ -3,6 +3,7 @@
 ###for network and co-occurrence analyses
 ###and selection experiments.
 
+library(vegan)
 n.null <- 5000
   
 ###Load communities
