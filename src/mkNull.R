@@ -10,7 +10,8 @@ n.null <- 5000
 oldwd <- getwd()
 setwd('../data/coms/')
 com.list <- (sapply(dir(),grepl,pattern='~')|sapply(dir(),grepl,pattern='\\#'))==FALSE
-m <- sapply(dir()[com.list],read.csv)
+m <- list()
+for (i in 1:length(com.list)){m[[i]] <- read.csv(dir()[com.list][i])}
 names(m) <- com.list
 setwd(oldwd)
 
