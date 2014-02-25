@@ -34,6 +34,38 @@
 %\setcounter{secnumdepth}{-1}  %activate to start numbering from one
 %on the second page
 
+\section{25 Feb 2014}
+
+New analysis structure for manuscript:
+
+\begin{enumerate}
+\item Genotype effect on network structure
+\item Genotype effect on co-occurrence patterns
+\item Selection effect on network structure
+\end{enumerate}
+
+Modeling and simulation process
+\begin{enumerate}
+\item These are handled by mkComs.R
+  \begin{itemize}
+  \item Generate communities with even species total abundances
+  \item Generate communities with asymptotic total abundances using gpm
+    from even communities
+  \end{itemize}
+\item Generate null communities for r00, r0, c1, r1 models
+\item Get network and co-occurrence statistics:
+  \begin{enumerate}
+  \item Get nestedness 
+  \item Get modularity
+  \item Get co-occurrence ses
+  \end{enumerate}
+\item Conduct selection:
+  \begin{enumerate}
+  \item directional
+  \item stabilizing
+  \item disruptive
+  \end{enumerate}
+\end{enumerate}
 
 \section{6 Feb 2014}
 

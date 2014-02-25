@@ -3,14 +3,16 @@
 ###for network and co-occurrence analyses
 ###and selection experiments.
 
+library(vegan)
 n.null <- 5000
   
 ###Load communities
 oldwd <- getwd()
 setwd('../data/coms/')
 com.list <- (sapply(dir(),grepl,pattern='~')|sapply(dir(),grepl,pattern='\\#'))==FALSE
-m <- sapply(dir()[com.list],source)
-names(m) <- com.list
+m <- list()
+for (i in 1:length(com.list)){m[[i]] <- read.csv(dir()[com.list][i])}
+names(m) <- dir()[com.list]
 setwd(oldwd)
 
 ###Null communities
@@ -19,7 +21,7 @@ unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
 
 ###r00
-output.loc <- '../data/null/r00'
+output.loc <- '../data/null/r00/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -33,7 +35,7 @@ for (k in 1:length(m)){
 }
 
 ###r0
-output.loc <- '../data/null/r0'
+output.loc <- '../data/null/r0/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -47,7 +49,7 @@ for (k in 1:length(m)){
 }
 
 ###c0
-output.loc <- '../data/null/c0'
+output.loc <- '../data/null/c0/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -61,7 +63,7 @@ for (k in 1:length(m)){
 }
 
 ###r1
-output.loc <- '../data/null/r1'
+output.loc <- '../data/null/r1/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing

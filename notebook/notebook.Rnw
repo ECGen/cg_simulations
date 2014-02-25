@@ -52,11 +52,14 @@ Modeling and simulation process
   \item Generate communities with asymptotic total abundances using gpm
     from even communities
   \end{itemize}
-\item Generate null communities for r00, r0, c1, r1 models
+\item This is being handeled by mkNull.R
+  \begin{itemize}
+  \item Generate null communities for r00, r0, c1, r1 models
+  \end{itemize}
 \item Get network and co-occurrence statistics:
   \begin{enumerate}
   \item Get nestedness 
-  \item Get modularity
+  \item Get modularity (this will need to be handled by a shell script)
   \item Get co-occurrence ses
   \end{enumerate}
 \item Conduct selection:
