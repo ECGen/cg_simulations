@@ -1,4 +1,4 @@
-###mkComs = simulated community maker
+###mkNull = simulated community maker
 ###produces a set of communities for
 ###network and co-occurrence analyses
 ###and selection experiments.
