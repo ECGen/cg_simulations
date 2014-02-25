@@ -21,7 +21,7 @@ unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
 
 ###r00
-output.loc <- '../data/null/r00'
+output.loc <- '../data/null/r00/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -35,7 +35,7 @@ for (k in 1:length(m)){
 }
 
 ###r0
-output.loc <- '../data/null/r0'
+output.loc <- '../data/null/r0/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -49,7 +49,7 @@ for (k in 1:length(m)){
 }
 
 ###c0
-output.loc <- '../data/null/c0'
+output.loc <- '../data/null/c0/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
@@ -63,7 +63,7 @@ for (k in 1:length(m)){
 }
 
 ###r1
-output.loc <- '../data/null/r1'
+output.loc <- '../data/null/r1/'
 unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
                                         #burning and writing
