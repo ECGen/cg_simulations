@@ -11,7 +11,7 @@
 ###Load ComGenR on hoth
 ###Sourcing ComGenR on hoth
 oldwd <- getwd()
-setwd('../../../../ComGenR/R/')
+setwd('../../packages/ComGenR/R')
 cgn.list <- (sapply(dir(),grepl,pattern='~')|sapply(dir(),grepl,pattern='\\#'))==FALSE
 sapply(dir()[cgn.list],source)
 setwd(oldwd)
