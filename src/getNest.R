@@ -11,4 +11,5 @@ null <- sign(x)[,apply(x,2,sum)!=0]
 print('Null Nestedness')
 if (all(null==1)){nest.null <- NA}else{nest.null <- nested(null)}
 cat(mod.null,file=as.character(args[2]),append=TRUE,sep=' ')
+cat(as.character(args[1]),file=paste('names_',as.character(args[2]),sep=''),append=TRUE,sep=' ')
 ###end###
