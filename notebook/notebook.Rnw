@@ -46,6 +46,7 @@ New analysis structure for manuscript:
 
 Modeling and simulation process
 \begin{enumerate}
+\item These are handled by mkComs.R
 \item Generate communities with even species total abundances
 \item Generate communities with asymptotic total abundances using gpm
   from even communities
