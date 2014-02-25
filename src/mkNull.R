@@ -12,7 +12,7 @@ setwd('../data/coms/')
 com.list <- (sapply(dir(),grepl,pattern='~')|sapply(dir(),grepl,pattern='\\#'))==FALSE
 m <- list()
 for (i in 1:length(com.list)){m[[i]] <- read.csv(dir()[com.list][i])}
-names(m) <- com.list
+names(m) <- dir()[com.list]
 setwd(oldwd)
 
 ###Null communities
