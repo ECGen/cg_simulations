@@ -1,11 +1,8 @@
 #! /usr/bin/env bash
 
-#clear the results location
-mkdir ../results/mods
-rm ../results/mods/*
-
-###Modularity
 #loop through null community folders r00, r0, c0, r1
+mkdir ../results/mods
+
 echo r00
 echo 'Automated message' |mail -s 'hoth: running r00' mkl48@nau.edu
 Files=../data/null/r00/*

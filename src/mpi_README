@@ -1,3 +1,6 @@
+compute-0-0
+compute-0-48
+
 For a parallel MPI job script, take a look at this script,
 linpack.sh. Note that you need to put in two SGE variables, $NSLOTS
 and $TMP/machines within the job script.

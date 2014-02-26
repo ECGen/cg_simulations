@@ -1,13 +1,10 @@
 #! /usr/bin/env bash
 
-#clear the results location
-mkdir ../results/mods
-rm ../results/mods/*
-
-###Modularity
 #loop through null community folders r00, r0, c0, r1
+mkdir ../results/mods
+
 echo r00
-echo 'Automated message' |mail -s 'hoth: running r00' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r00' mkl48@nau.edu
 Files=../data/null/r00/*
 for f in $Files
 do
@@ -21,7 +18,7 @@ do
 done
 
 echo r0
-echo 'Automated message' |mail -s 'hoth: running r0' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r0' mkl48@nau.edu
 Files=../data/null/r0/*
 for f in $Files
 do
@@ -35,7 +32,7 @@ do
 done
 
 echo c0
-echo 'Automated message' |mail -s 'hoth: running c0' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running c0' mkl48@nau.edu
 Files=../data/null/c0/*
 for f in $Files
 do
@@ -49,7 +46,7 @@ do
 done
 
 echo r1
-echo 'Automated message' |mail -s 'hoth: running r1' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r1' mkl48@nau.edu
 Files=../data/null/r1/*
 for f in $Files
 do
@@ -63,4 +60,4 @@ do
 done
 
 #email notification
-echo 'Automated message' |mail -s 'hoth: getStats.sh done.' mkl48@nau.edu
+echo '...' |mail -s 'hoth: getStats.sh done.' mkl48@nau.edu
