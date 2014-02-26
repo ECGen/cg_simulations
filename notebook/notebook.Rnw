@@ -45,6 +45,12 @@ Debugs run. Running simulation with:
 \item Also using a modularity step limit of 10,000
 \end{itemize}
 
+Setting up on server:
+\begin{enumerate}
+\item Run cgs_init.sh
+\item Close screen
+\item Run cgs_stats.sh
+\end{enumerate}
 
 \section{25 Feb 2014}
 
