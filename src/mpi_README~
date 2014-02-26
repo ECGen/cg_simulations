@@ -1,0 +1,3 @@
+
+
+qsub -pe mpich 2 linpack.sh
