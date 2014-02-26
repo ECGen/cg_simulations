@@ -30,7 +30,7 @@ for (k in 1:length(m)){
   for (i in 1:n.null){
     null <- commsimulator(m[[k]],method='r00',thin=100)
     for (j in 1:500){null <- commsimulator(null,method='r00',thin=100)}
-    write.csv(null,paste(output.loc,'r00',names(m)[k],i,sep=''))
+    write.csv(null,paste(output.loc,'r00',names(m)[k],i,sep=''),row.names=FALSE)
     print(paste(output.loc,'r00',names(m)[k],i,sep=''))
   }
 }
@@ -44,7 +44,7 @@ for (k in 1:length(m)){
   for (i in 1:n.null){
     null <- commsimulator(m[[k]],method='r0',thin=100)
     for (j in 1:500){null <- commsimulator(null,method='r0',thin=100)}
-    write.csv(null,paste(output.loc,'r0',names(m)[k],i,sep=''))
+    write.csv(null,paste(output.loc,'r0',names(m)[k],i,sep=''),row.names=FALSE)
     print(paste(output.loc,'r0',names(m)[k],i,sep=''))
   }
 }
@@ -58,7 +58,7 @@ for (k in 1:length(m)){
   for (i in 1:n.null){
     null <- commsimulator(m[[k]],method='c0',thin=100)
     for (j in 1:500){null <- commsimulator(null,method='c0',thin=100)}
-    write.csv(null,paste(output.loc,'c0',names(m)[k],i,sep=''))
+    write.csv(null,paste(output.loc,'c0',names(m)[k],i,sep=''),row.names=FALSE)
     print(paste(output.loc,'c0',names(m)[k],i,sep=''))
   }
 }
@@ -72,7 +72,7 @@ for (k in 1:length(m)){
   for (i in 1:n.null){
     null <- commsimulator(m[[k]],method='r1',thin=100)
     for (j in 1:500){null <- commsimulator(null,method='r1',thin=100)}
-    write.csv(null,paste(output.loc,'r1',names(m)[k],i,sep=''))
+    write.csv(null,paste(output.loc,'r1',names(m)[k],i,sep=''),row.names=FALSE)
     print(paste(output.loc,'r1',names(m)[k],i,sep=''))
   }
 }
