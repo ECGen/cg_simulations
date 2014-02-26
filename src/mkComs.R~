@@ -22,8 +22,8 @@ unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
 round.sim <- TRUE
 threshold <- 5
-n.sim <- 10
-n.reps <- 5
+n.sim <- 3
+n.reps <- 3
 
 ###Make trees and bugs
 tree.gpm <- gpmTrees(reps=n.reps)

@@ -4,7 +4,7 @@
 ###and selection experiments.
 
 library(vegan)
-n.null <- 1000
+n.null <- 1
   
 ###Load communities
 oldwd <- getwd()

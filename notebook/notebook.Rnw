@@ -35,7 +35,16 @@
 %on the second page
 
 \section{26 Feb 2014}
-Running debugs on hoth.
+Debugs run. Running simulation with: 
+\begin{itemize}
+\item 5 genotypes
+\item 5 reps each
+\item 8 genetic scenarios
+\item 10 iterations per scenario
+\item 1000 null communities 
+\item Also using a modularity step limit of 10,000
+\end{itemize}
+
 
 \section{25 Feb 2014}
 
