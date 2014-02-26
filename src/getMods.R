@@ -6,6 +6,7 @@ library(methods)
                                         #null file location
 args <- commandArgs(trailingOnly = TRUE)
 x <- read.csv(as.character(args[1]))
+x <- x[,grepl('S',colnames(x))]
 null <- sign(x)[,apply(x,2,sum)!=0]
 print('Null Modules')
 mod.null <- slot(computeModules(null),name='likelihood')

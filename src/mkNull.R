@@ -4,7 +4,7 @@
 ###and selection experiments.
 
 library(vegan)
-n.null <- 5000
+n.null <- 1
   
 ###Load communities
 oldwd <- getwd()
@@ -14,6 +14,7 @@ m <- list()
 for (i in 1:length(com.list)){m[[i]] <- read.csv(dir()[com.list][i])}
 names(m) <- dir()[com.list]
 setwd(oldwd)
+m <- lapply(m,function(x) x[,grepl('S',colnames(x))])
 
 ###Null communities
 output.loc <- '../data/null/'

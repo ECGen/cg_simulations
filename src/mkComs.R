@@ -22,9 +22,10 @@ unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
 round.sim <- TRUE
 threshold <- 5
-n.sim <- 25
-n.reps <- 25
-###
+n.sim <- 3
+n.reps <- 3
+
+###Make trees and bugs
 tree.gpm <- gpmTrees(reps=n.reps)
 #make H2B=55%
 trees <- simTrees(tree.gpm,VeT=7.5);h2b <- getH2C(trees,tree.gpm[,1],method='nmds')[2]
@@ -43,7 +44,7 @@ for (i in 1:8){
     out[[j]] <- cgSim(trees=trees,insects=insects,z=i,Ve=0.1,VeN=3,k.asym=FALSE,artpop.only=TRUE)
     if (round.sim){out[[j]][out[[j]]<threshold] <- 0}
     print(paste(i,j))
-    write.csv(out[[j]],file=paste(output.loc,'even',paste(i,j,sep=''),sep=''))
+    write.csv(out[[j]],file=paste(output.loc,'even',paste(i,j,sep=''),sep=''),row.names=FALSE)
   }
 }
 ###asymptotic communities
@@ -54,7 +55,7 @@ for (i in 1:8){
     out[[j]] <- cgSim(trees=trees,insects=insects,z=i,Ve=0.1,VeN=3,k.asym=TRUE,artpop.only=TRUE)
     if (round.sim){out[[j]][out[[j]]<threshold] <- 0}
     print(paste(i,j))
-    write.csv(out[[j]],file=paste(output.loc,'asym',paste(i,j,sep=''),sep=''))
+    write.csv(out[[j]],file=paste(output.loc,'asym',paste(i,j,sep=''),sep=''),row.names=FALSE)
   }
 }
 

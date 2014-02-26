@@ -13,11 +13,11 @@ for f in $Files
 do
     echo $f
     echo modularity
-    Rscript getMods.R f ../results/modsr00.txt
+    Rscript getMods.R $f ../results/modsr00.txt
     echo nestedness
-    Rscript getNest.R f ../results/nestr00.txt
+    Rscript getNest.R $f ../results/nestr00.txt
     echo SES
-    Rscript getCscore.R f ../results/csr00.txt    
+    Rscript getCscore.R $f ../results/csr00.txt    
 done
 
 echo r0
@@ -27,11 +27,11 @@ for f in $Files
 do
     echo $f
     echo modularity
-    Rscript getMods.R f ../results/modsr0.txt
+    Rscript getMods.R $f ../results/modsr0.txt
     echo nestedness
-    Rscript getNest.R f ../results/nestr0.txt
+    Rscript getNest.R $f ../results/nestr0.txt
     echo SES
-    Rscript getCscore.R f ../results/csr0.txt    
+    Rscript getCscore.R $f ../results/csr0.txt    
 done
 
 echo c0
@@ -41,11 +41,11 @@ for f in $Files
 do
     echo $f
     echo modularity
-    Rscript getMods.R f ../results/modsc0.txt
+    Rscript getMods.R $f ../results/modsc0.txt
     echo nestedness
-    Rscript getNest.R f ../results/nestc0.txt
+    Rscript getNest.R $f ../results/nestc0.txt
     echo SES
-    Rscript getCscore.R f ../results/csc0.txt    
+    Rscript getCscore.R $f ../results/csc0.txt    
 done
 
 echo r1
@@ -55,11 +55,11 @@ for f in $Files
 do
     echo $f
     echo modularity
-    Rscript getMods.R f ../results/modsr1.txt
+    Rscript getMods.R $f ../results/modsr1.txt
     echo nestedness
-    Rscript getNest.R f ../results/nestr1.txt
+    Rscript getNest.R $f ../results/nestr1.txt
     echo SES
-    Rscript getCscore.R f ../results/csr1.txt    
+    Rscript getCscore.R $f ../results/csr1.txt    
 done
 
 #email notification
