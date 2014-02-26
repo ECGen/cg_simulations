@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+
+#email notification
+echo '...' |mail -s 'hoth: cg simulations are done.' mkl48@nau.edu
