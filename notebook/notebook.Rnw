@@ -34,6 +34,9 @@
 %\setcounter{secnumdepth}{-1}  %activate to start numbering from one
 %on the second page
 
+\section{26 Feb 2014}
+Running debugs on hoth.
+
 \section{25 Feb 2014}
 
 New analysis structure for manuscript:
