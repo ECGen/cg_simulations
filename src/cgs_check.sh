@@ -25,3 +25,4 @@ echo r00: $r00pc
 echo r0: $r0pc
 echo c0: $c0pc
 echo r1: $r1pc
+echo r00 $r00pc r0 $r0pc c0 $c0pc r1 r1pc | mail -s 'hoth: cgs_check' mkl48@nau.edu
