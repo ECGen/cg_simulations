@@ -34,6 +34,20 @@
 %\setcounter{secnumdepth}{-1}  %activate to start numbering from one
 %on the second page
 
+\section{27 Feb 2014}
+
+Streamline the workflow for this. See github Issue #8.
+
+Waiting for null communities to finish before starting c0 and r1
+stats. However, r00 stats are finished and r0 stats ended incomplete.
+
+Backing up cg_simulations folder on hoth to cg_sim_backup27Feb2014.zip
+
+r00 null communities finished
+r0 null communities still running (screen -r cgsim)
+c0 null communities still running (screen -r mkNull -p 0)
+r1 null communities still running (screen -r mkNull -p 1)
+
 \section{26 Feb 2014}
 Debugs run. Running simulation with: 
 \begin{itemize}
