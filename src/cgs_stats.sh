@@ -2,7 +2,7 @@
 
 #start a screen session and navigate to src
 screen -dmS "cgsim2"
-screen -S cgsim -X screen
+screen -S cgsim2 -X screen
 # screen -S cgsim -X screen
 # screen -S cgsim -X screen
 
