@@ -18,6 +18,7 @@ m <- lapply(m,function(x) x[,grepl('S',colnames(x))])
 
 ###Null communities
 output.loc <- '../data/null/'
+unlink(output.loc,recursive=TRUE)
 dir.create(output.loc)
 
 ###r00
