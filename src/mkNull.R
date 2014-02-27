@@ -46,31 +46,31 @@ for (k in 1:length(m)){
   }
 }
 
-###c0
-output.loc <- '../data/null/c0/'
-dir.create(output.loc)
-                                        #burning and writing
-for (k in 1:length(m)){
-  for (i in 1:n.null){
-    null <- commsimulator(m[[k]],method='c0',thin=100)
-    for (j in 1:500){null <- commsimulator(null,method='c0',thin=100)}
-    write.csv(null,paste(output.loc,'c0',names(m)[k],i,sep=''),row.names=FALSE)
-    print(paste(output.loc,'c0',names(m)[k],i,sep=''))
-  }
-}
+## ###c0
+## output.loc <- '../data/null/c0/'
+## dir.create(output.loc)
+##                                         #burning and writing
+## for (k in 1:length(m)){
+##   for (i in 1:n.null){
+##     null <- commsimulator(m[[k]],method='c0',thin=100)
+##     for (j in 1:500){null <- commsimulator(null,method='c0',thin=100)}
+##     write.csv(null,paste(output.loc,'c0',names(m)[k],i,sep=''),row.names=FALSE)
+##     print(paste(output.loc,'c0',names(m)[k],i,sep=''))
+##   }
+## }
 
-###r1
-output.loc <- '../data/null/r1/'
-dir.create(output.loc)
-                                        #burning and writing
-for (k in 1:length(m)){
-  for (i in 1:n.null){
-    null <- commsimulator(m[[k]],method='r1',thin=100)
-    for (j in 1:500){null <- commsimulator(null,method='r1',thin=100)}
-    write.csv(null,paste(output.loc,'r1',names(m)[k],i,sep=''),row.names=FALSE)
-    print(paste(output.loc,'r1',names(m)[k],i,sep=''))
-  }
-}
+## ###r1
+## output.loc <- '../data/null/r1/'
+## dir.create(output.loc)
+##                                         #burning and writing
+## for (k in 1:length(m)){
+##   for (i in 1:n.null){
+##     null <- commsimulator(m[[k]],method='r1',thin=100)
+##     for (j in 1:500){null <- commsimulator(null,method='r1',thin=100)}
+##     write.csv(null,paste(output.loc,'r1',names(m)[k],i,sep=''),row.names=FALSE)
+##     print(paste(output.loc,'r1',names(m)[k],i,sep=''))
+##   }
+## }
 
 print('Done.')
 
