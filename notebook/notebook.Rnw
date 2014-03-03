@@ -34,7 +34,59 @@
 %\setcounter{secnumdepth}{-1}  %activate to start numbering from one
 %on the second page
 
+\section{03 Mar 2014}
+
+Current status:
+
+\begin{enumerate}
+\item Communities are made and backed up (on Hoth)
+\item Null communities are mode and backed up (on Hoth)
+\item Setting up stats scripts on Hoth
+\end{enumerate}
+
 \section{27 Feb 2014}
+
+\subsection*{afternoon}
+Taking a look at the r00 stats:
+
+<<>>=
+library(bipartite)
+library(ComGenR)
+asym11 <- read.csv('~/Desktop/asym11')
+asym11[asym11!=0] <- 1
+obs.nest <- nested(asym11)
+obs.mods <- computeModules(asym11,steps=10000)
+obs.mods <- slot(obs.mods,'likelihood')
+obs.cs <- cscore(asym11)
+
+#names
+com.n <- readLines('../results/com_names.txt')
+com.n <- unlist(strsplit(com.n,split=' '))
+com.type <- substr(com.n,4,7)
+com.ge <- substr(com.n,8,8)
+
+##nestedness
+nest <- readLines('../results/nestr00.txt')
+nest <- as.numeric(unlist(strsplit(nest,split=' ')))
+hist(nest,xlim=c(0,100))
+abline(v=obs.nest)
+
+##modularity
+mods <- readLines('../results/modsr00.txt')
+mods <- as.numeric(unlist(strsplit(mods,split=' ')))
+hist(mods)
+abline(v=obs.mods)
+
+##co-occurrence
+cs <- readLines('../results/csr00.txt')
+cs <- as.numeric(unlist(strsplit(cs,split=' ')))
+hist(cs,xlim=c(40,110))
+abline(v=obs.cs)
+
+@ 
+
+
+\subsection*{morning}
 
 Streamline the workflow for this. See github Issue #8.
 

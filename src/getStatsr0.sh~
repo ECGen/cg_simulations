@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 echo r0
-echo '...' |mail -s 'hoth: running r0 stats' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r0' mkl48@nau.edu
 Files=../data/null/r0/*
 for f in $Files
 do
