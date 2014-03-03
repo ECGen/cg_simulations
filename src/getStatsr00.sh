@@ -2,13 +2,13 @@
 
 #loop through null community folders r00, r0, c0, r1
 echo r00
-echo '...' |mail -s 'hoth: running r00 stats' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r00 nestedness and cscore' mkl48@nau.edu
 Files=../data/null/r00/*
 for f in $Files
 do
     echo $f
-    echo modularity
-    Rscript getMods.R $f ../results/modsr00.txt
+#     echo modularity
+#     Rscript getMods.R $f ../results/modsr00.txt
     echo nestedness
     Rscript getNest.R $f ../results/nestr00.txt
     echo SES

@@ -1,13 +1,13 @@
 #! /usr/bin/env bash
 
 echo r1
-echo '...' |mail -s 'hoth: running r1 stats' mkl48@nau.edu
+echo '...' |mail -s 'hoth: running r1 nestedness and cscore' mkl48@nau.edu
 Files=../data/null/r1/*
 for f in $Files
 do
     echo $f
-    echo modularity
-    Rscript getMods.R $f ../results/modsr1.txt
+#     echo modularity
+#     Rscript getMods.R $f ../results/modsr1.txt
     echo nestedness
     Rscript getNest.R $f ../results/nestr1.txt
     echo SES

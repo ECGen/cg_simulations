@@ -36,12 +36,20 @@
 
 \section{03 Mar 2014}
 
+Estimated time to completion:
+56 stats in 16.6333333 minutes for r1
+3.367408 stats/minute
+160000 stats / 3.367408 stats/minute = 47514.29 minutes
+47514.29 / 60 minutes = 791.9048 hours
+791.9048 hours / 24 = 32.99603 days
+
 Current status:
 
 \begin{enumerate}
 \item Communities are made and backed up (on Hoth)
 \item Null communities are mode and backed up (on Hoth)
-\item getStats for r00, r0, c0, r1 are running on hoth.
+\item getStats for r00, r0, c0, r1 are running (on Hoth with nest and
+  cscrore running separately from mods).
 \end{enumerate}
 
 \section{27 Feb 2014}
