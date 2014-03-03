@@ -41,7 +41,7 @@ Current status:
 \begin{enumerate}
 \item Communities are made and backed up (on Hoth)
 \item Null communities are mode and backed up (on Hoth)
-\item Setting up stats scripts on Hoth
+\item getStats for r00, r0, c0, r1 are running on hoth.
 \end{enumerate}
 
 \section{27 Feb 2014}
