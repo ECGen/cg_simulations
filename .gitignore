@@ -1,0 +1,9 @@
+#
+data
+
+
+#R files
+.Rhistory
+
+#emacs files
+*~

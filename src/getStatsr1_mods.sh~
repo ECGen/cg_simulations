@@ -2,7 +2,7 @@
 
 echo r1
 echo '...' |mail -s 'hoth: running r1 mods' mkl48@nau.edu
-Files=~projects/cg_simulations/data/null/r1/*
+Files=~/projects/cg_simulations/data/null/r1/*
 for f in $Files
 do
     echo $f
