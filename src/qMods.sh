@@ -6,7 +6,7 @@
 #caselist=$(ls) 
 
 #Make sure to copy the cgsMods.R file into the working directory
-cp /Users/Aeolus/projects/cg_simulations/src/cgsMods.R ./
+cp /home/mlau/projects/cg_simulations/src/cgsMods.R ./
 
 for case in $caselist
 do
