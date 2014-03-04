@@ -2,16 +2,16 @@
 
 echo r1
 echo '...' |mail -s 'hoth: running r1 nestedness and cscore' mkl48@nau.edu
-Files=~/projects/cg_simulations/data/null/r1/*
+Files=../data/null/r1/*
 for f in $Files
 do
     echo $f
 #     echo modularity
-#     Rscript getMods.R $f ~/projects/cg_simulations/results/modsr1.txt
+#     Rscript getMods.R $f ../results/modsr1.txt
     echo nestedness
-    Rscript getNest.R $f ~/projects/cg_simulations/results/nestr1.txt
+    Rscript getNest.R $f ../results/nestr1.txt
     echo SES
-    Rscript getCscore.R $f ~/projects/cg_simulations/results/csr1.txt    
+    Rscript getCscore.R $f ../results/csr1.txt    
 done
 
 
