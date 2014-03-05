@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 #$ -N coms
-#$ -pe mpi 30
+#$ -pe mpi 1
 #$ -M mkl48@nau.edu
 #$ -m eas
 #Wall time:
