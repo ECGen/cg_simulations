@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
-#$ -N r1
+#$ -N coms
 #$ -pe mpi 15
 #$ -M mkl48@nau.edu
 #$ -m eas
 #Wall time:
-#$ -l h_rt=3:00:00
+#$ -l h_rt=1:00:00
 
 ###Submission loop:
-###for case in $ql; do qsub -o ~/qmonitor -e ~/qmonitor -cwd -v case=$case $cgssrc/qStats_coms.sh; sleep 2; done
-###Note: sleep 2 allows a minimum of 2s between submissions
+###for case in $ql; do qsub -o ~/qmonitor -e ~/qmonitor -cwd -v case=$case $cgssrc/qStats_coms.sh; done
+###Note: sleep can be used to delay submissions
 
 cp /home/mlau/projects/cg_simulations/src/cgsMods.R ./
 cp /home/mlau/projects/cg_simulations/src/cgsNest.R ./
