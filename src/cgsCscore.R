@@ -3,6 +3,7 @@
 ###Two arguments: 1 = input file, 2 = output file
 args <- commandArgs(trailingOnly = TRUE)
 x <- read.csv(as.character(args[1]))
+x[x!=0] <- 1
 if (all(x==0)|all(x==1)){
   out <- NA
 }else{
