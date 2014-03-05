@@ -7,7 +7,7 @@
 #$ -l h_rt=3:00:00
 
 ###Submission loop:
-###for case in $ql; do qsub -o ~/qmonitor -e ~/qmonitor -cwd -v case=$case $cgssrc/qStats_r1.sh; sleep 2; done;rm cgs*.R
+###for case in $ql; do qsub -o ~/qmonitor -e ~/qmonitor -cwd -v case=$case $cgssrc/qStats_r1.sh; sleep 2; done
 ###Note: sleep 2 allows a minimum of 2s between submissions
 
 cp /home/mlau/projects/cg_simulations/src/cgsMods.R ./
