@@ -7,9 +7,8 @@ x[x!=0] <- 1
 if (all(x==0)|all(x==1)){
   out <- NA
 }else{
-  library(bipartite)
-  library(methods)
-  out <- C.score(x,normalize=TRUE)
+  library(vegan)
+  out <-as.numeric(nestedchecker(x))[1]
 }
 info <- unlist(strsplit(as.character(args[1]),split='\\/'))
 info <- info[length(info)]
