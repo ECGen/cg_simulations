@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 #$ -N coms
-#$ -pe mpi 15
+#$ -pe mpi 30
 #$ -M mkl48@nau.edu
 #$ -m eas
 #Wall time:
-#$ -l h_rt=1:00:00
+#$ -l h_rt=0:30:00
 
 ###Submission loop:
 ###for case in $ql; do qsub -o ~/qmonitor -e ~/qmonitor -cwd -v case=$case $cgssrc/qStats_coms.sh; done
