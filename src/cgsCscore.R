@@ -8,8 +8,7 @@ if (all(x==0)|all(x==1)){
 }else{
   library(bipartite)
   library(methods)
-  mod <- computeModules(x,steps=10000)
-  out <- slot(mod,'likelihood')
+  out <- C.score(x,normalize=TRUE)
 }
 info <- unlist(strsplit(as.character(args[1]),split='\\/'))
 info <- info[length(info)]

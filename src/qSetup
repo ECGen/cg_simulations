@@ -1,0 +1,13 @@
+###Setting up qsub jobs on hoth
+
+###$cgsrc is setup in the .bash_profile. Check if there are issues.
+
+#0. mv the output (e.g. mods.txt) files
+#00. rm the *.sh.* files from qmonitor
+#1. within the folder create a new variable $qlist with space
+#separated names of the input files 
+#ql=$(ls)
+#2. cp the qRun.sh to the folder
+#cp $cgssrc/qRun.sh
+#3. submit to qsub using for loop
+
