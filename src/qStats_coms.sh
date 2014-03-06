@@ -2,7 +2,7 @@
 #$ -N coms
 #$ -pe mpi 1
 #$ -M mkl48@nau.edu
-#$ -m eas
+#$ -m as
 #Wall time:
 #$ -l h_rt=0:30:00
 
