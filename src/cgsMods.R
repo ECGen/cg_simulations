@@ -9,7 +9,7 @@ if (all(x==0)|all(x==1)){
 }else{
   library(bipartite)
   library(methods)
-  mod <- computeModules(x,steps=10000)
+  mod <- computeModules(x,steps=1000000)
   out <- slot(mod,'likelihood')
 }
 info <- unlist(strsplit(as.character(args[1]),split='\\/'))
