@@ -3,7 +3,11 @@ cg_simulations
 
 Community genetics simulations for the Lau et al. 2014 manuscript.
 
-Workflow:
+See notebook/notebook.Rnw for the simulations. 
+
+Network analyses were conducted using the Hoth parallel computing cluster at NAU.
+
+Workflow Summary
 - Create simulated communities using mkComs.R
 - Generate null communities using mkNull*.R (separate for r00,r0,c0,r1)
 - Conduct stats for Cscores, Nestedness and Modularity using cgs_Stats.sh
