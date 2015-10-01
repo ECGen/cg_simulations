@@ -1,0 +1,45 @@
+Node,TaxonID
+1,Pemphigus betae
+23,Dolichocolon sp. 1
+2,Phytaminae 
+24,Diptera 2
+3,Anthocoris antevolens
+25,Formica propinqua
+4,Araniella displicata
+26,Formica sp. 1
+5,Asilidae 1
+27,Formica sp. 2
+6,Reduviidae 1
+28,Pemphigus populi-globuli
+7,Reduviidae 2
+29,Hymenoptera 1
+8,Asilidae 2 
+30,Ichneumonidae 1
+9,Boisea triveata
+31,Chrysopa sp.
+10,Anobiidae 
+32,Cycloneda sp.
+11,Encyrtidae 
+33,Harmonia axyridis
+12,Braconidae 
+34,Anacampsis niveopulvella
+13,Phaenicia sericata
+35,Gypona sp. 1
+14,Cercopidae 
+36,Cicadellidae 1
+15,Chaitophorus populicola
+37,Cicadellidae 2
+16,Cleridae 
+38,Gypona sp. 2
+17,Coccinelidae (nymph)
+39,Cicadellidae 3
+18,Argia sp. 
+40,Listrus sp.
+19,Forficula auricularia
+41,Chironomidae
+20,Tortricidae (larva)
+42,Aceria parapopuli
+21,Chrysopidae (egg)
+43,Muscidae
+22,Diptera 1
+44,Myrmica sp.

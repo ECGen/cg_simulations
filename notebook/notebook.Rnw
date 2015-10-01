@@ -41,6 +41,66 @@
 %\setcounter{secnumdepth}{-1}  %activate to start numbering from one
 %on the second page
 
+\section{26 Aug 2015}
+
+library('jpeg')
+    plot(1:2, type='n',xaxt='n',yaxt='n',xlab='',ylab='',bty='n')
+    x <- readJPEG(x)
+    rasterImage(x, 1*scale, 1*scale, 2*scale, 2*scale)
+https://rdataviz.wordpress.com/2010/03/05/getting-data-from-an-image-introductory-post/
+
+Double checking analyses for manuscript:
+    
+<<>>=
+source('../src/global.R')
+mod <- cgsMelt(readLines('../results/6mar2014/mods_coms.txt'))
+nes <- cgsMelt(readLines('../results/6mar2014/nest_coms.txt'))
+csc <- cgsMelt(readLines('../results/6mar2014/cscore_coms.txt'))
+
+plot(mod$met~mod$gef,col=as.numeric(mod$sim))
+plot(nes$met~nes$gef,col=as.numeric(nes$sim))
+plot(csc$met~csc$gef,col=as.numeric(csc$sim))
+
+### correlation analyses
+mod <- split(mod,mod[,1])
+nes <- split(nes,nes[,1])
+csc <- split(csc,csc[,1])
+
+cor.test(mod$even$met,mod$even$gef,method='kendall') ### even
+cor.test(nes$even$met,nes$even$gef,method='kendall')
+cor.test(csc$even$met,csc$even$gef,method='kendall')
+cor.test(mod$asym$met,mod$asym$gef,method='kendall') ### asym
+cor.test(nes$asym$met,nes$asym$gef,method='kendall')
+cor.test(csc$asym$met,csc$asym$gef,method='kendall')
+
+library(breakpoint)
+bp.out <- breakpoint::CE.Normal(data.frame(csc$asym$met[order(csc$asym$gef)]),Nmax=2)
+
+cor.test(csc$asym$met[1:(bp.out$BP.Loc[1]-1)],csc$asym$gef[1:(bp.out$BP.Loc[1]-1)],method='kendall')
+cor.test(csc$asym$met[bp.out$BP.Loc[1]:length(csc$asym$met)],csc$asym$gef[bp.out$BP.Loc[1]:length(csc$asym$met)],method='kendall')
+
+## linear 
+## polynomials
+summary(em.f <- lm(met ~ gef + I(gef^2),data=mod$even))
+summary(en.f <- lm(met ~ gef + I(gef^2),data=nes$even))
+summary(ec.f <- lm(met ~ gef + I(gef^2),data=csc$even))
+
+summary(am.f <- lm(met ~ gef + I(gef^2),data=mod$asym))
+summary(an.f <- lm(met ~ gef + I(gef^2),data=nes$asym))
+summary(cn.f <- lm(met ~ gef + I(gef^2),data=csc$asym))
+
+par(mfrow=c(2,2))
+plot(mod$even$gef,mod$even$met,ylim=c(0,0.3));pline(mod$even$gef,mod$even$met,col='black')
+points(mod$asym$gef,mod$asym$met);pline(mod$asym$gef,mod$asym$met,col='red')
+plot(nes$even$gef,nes$even$met);pline(nes$even$gef,nes$even$met,col='black')
+points(nes$asym$gef,nes$asym$met);pline(nes$asym$gef,nes$asym$met,col='red')
+plot(csc$even$gef,csc$even$met);pline(csc$even$gef,csc$even$met,col='black')
+points(csc$asym$gef,csc$asym$met);pline(csc$asym$gef,csc$asym$met,col='red')
+
+
+
+@ 
+
 \section{03 Mar 2014}
 
 Estimated time to completion:
